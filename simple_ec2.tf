@@ -1,7 +1,7 @@
 # Create Key Pair
 resource "aws_key_pair" "my_key" {
-  key_name   = "rakesh_key"                # ✅ Should be just a name (no .pem extension)
-  public_key = file("rakesh_key.pub")      # ✅ Use the PUBLIC key, not private
+  key_name   = "rakesh_key"                
+  public_key = file("rakesh_key.pub")    
 }
 
 # Use default VPC
@@ -54,8 +54,8 @@ resource "aws_security_group" "my_sg_group" {
 resource "aws_instance" "my_instance" {
   ami           = "ami-0360c520857e3138f"
   instance_type = "t2.medium"
-  key_name      = aws_key_pair.my_key.key_name   # ✅ Correct reference
-  vpc_security_group_ids = [aws_security_group.my_sg_group.id]  # ✅ Correct reference
+  key_name      = aws_key_pair.my_key.key_name   
+  vpc_security_group_ids = [aws_security_group.my_sg_group.id]  
 
   root_block_device {
     volume_size = 10
