@@ -55,7 +55,8 @@ resource "aws_instance" "my_instance" {
   ami           = "ami-0360c520857e3138f"
   instance_type = "t2.medium"
   key_name      = aws_key_pair.my_key.key_name   
-  vpc_security_group_ids = [aws_security_group.my_sg_group.id]  
+  vpc_security_group_ids = [aws_security_group.my_sg_group.id] 
+  user_data = file("nginx.sh")
 
   root_block_device {
     volume_size = 10
