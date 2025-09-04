@@ -1,7 +1,7 @@
 # Create Key Pair
 resource "aws_key_pair" "my_key" {
-  key_name   = "rakesh_key"                
-  public_key = file("rakesh_key.pub")    
+  key_name   = "perala_key"                
+  public_key = file("perala_key.pub")    
 }
 
 # Use default VPC
