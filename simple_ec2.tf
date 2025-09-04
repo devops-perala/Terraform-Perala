@@ -66,3 +66,8 @@ resource "aws_instance" "my_instance" {
     Name = "my-instance"
   }
 }
+
+
+
+### Note :-  go to ec2----cat rakesh_key ----copy the context in notepad save it --its private key
+             go to download folder create file name rakesh_key paste the notepad content init and use as pem.key
