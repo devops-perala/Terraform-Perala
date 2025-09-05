@@ -4,3 +4,5 @@ sudo apt update && sudo apt install terraform
 
 ### aws CLI ######
     sudo snap install aws-cli --classic
+
+    ## aws configure #######
